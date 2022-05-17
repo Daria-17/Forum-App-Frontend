@@ -1,10 +1,17 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <navbar></navbar>
   <router-view/>
 </template>
+
+<script>
+import Navbar from '@/components/Navbar'
+
+export default {
+  name: 'App',
+  // eslint-disable-next-line vue/no-unused-components
+  components: { Navbar }
+}
+</script>
 
 <style>
 #app {
