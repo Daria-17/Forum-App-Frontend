@@ -1,3 +1,4 @@
+[![CI](https://github.com/Daria-17/Forum-App-Frontend/actions/workflows/ci.yml/badge.svg)](https://github.com/Daria-17/Forum-App-Frontend/actions/workflows/ci.yml)
 # forum-app-frontend
 
 ## Project setup
