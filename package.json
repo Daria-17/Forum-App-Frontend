@@ -25,8 +25,12 @@
   },
   "name": "forum-app-frontend",
   "private": true,
+  "engines": {
+    "node": "17.x",
+    "npm": "8.x"
+  },
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
