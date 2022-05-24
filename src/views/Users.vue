@@ -1,6 +1,6 @@
 <template>
   <h1>Members</h1>
-  <div class="member-list" style="position: center">
+  <div class="member-list" >
     <div class="col" v-for="user in users" :key="user.id">
       <ul class="list-group list-group-horizontal">
         <li class="list-group-item">{{ user.id }}</li>
