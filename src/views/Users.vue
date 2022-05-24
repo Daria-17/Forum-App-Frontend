@@ -5,7 +5,7 @@
       <ul class="list-group list-group-horizontal">
         <li class="list-group-item">{{ user.id }}</li>
         <li class="list-group-item">{{ user.nickname }}</li>
-        <li class="list-group-item">{{ user.active ? 'Nutzer: aktiv': 'Nutzer: inaktiv' }}</li>
+        <li class="list-group-item">{{ user.active ? 'Nutzer: aktiv' : 'Nutzer: inaktiv' }}</li>
       </ul>
     </div>
   </div>
@@ -17,21 +17,25 @@ export default {
   name: 'Users',
   data () {
     return {
-      users: [
-        {
-          id: 1,
-          nickname: 'arifWider155',
-          active: 'true'
-        },
-        {
-          id: 2,
-          nickname: 'Goofy1',
-          active: 'false'
-        }
-      ]
+      users: []
     }
+  },
+  mounted () {
+    const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/users'
+    const requestOptions = {
+      method: 'GET',
+      redirect: 'follow'
+    }
+
+    fetch(endpoint, requestOptions)
+      .then(response => response.json())
+      .then(result => result.forEach(user => {
+        this.users.push(user)
+      }))
+      .catch(error => console.log('error', error))
   }
 }
+
 </script>
 
 <style scoped>
