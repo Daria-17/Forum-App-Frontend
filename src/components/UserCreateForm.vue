@@ -35,13 +35,13 @@
             <option value="FEMALE">Admin</option>
           </select>
         </div>
-<!--        <div v-if="this.serverValidationMessages">
+        <div v-if="this.serverValidationMessages">
           <ul>
             <li v-for="(message, index) in serverValidationMessages" :key="index" style="color: red">
               {{ message }}
             </li>
           </ul>
-        </div>-->
+        </div>
         <div class="mt-5">
           <button class="btn btn-primary me-3" type="submit" @click.prevent="createUser">Create</button>
           <button class="btn btn-danger" type="reset">Reset</button>
@@ -73,8 +73,8 @@ export default {
 
       const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/users'
 
-      const headers = new Headers()
-      headers.append('Content-Type', 'application/json')
+      const myHeaders = new Headers()
+      myHeaders.append('Content-Type', 'application/json')
 
       const payload = JSON.stringify({
         firstName: this.firstName,
@@ -82,10 +82,9 @@ export default {
         email: this.email,
         password: this.password
       })
-
       const requestOptions = {
         method: 'POST',
-        headers: headers,
+        headers: myHeaders,
         body: payload,
         redirect: 'follow'
       }
