@@ -5,7 +5,7 @@ import Users from '@/views/Users'
 
 describe('Testing UserCreateForm.vue', () => {
   it('should not show form by default', () => {
-    // when
+    // this comment
     const wrapper = mount(UserCreateForm)
 
     // then
