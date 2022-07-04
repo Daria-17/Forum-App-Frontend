@@ -70,6 +70,29 @@ export default {
       console.log(this.email)
       console.log(this.password)
       console.log(this.userRole)
+
+      const endpoint = process.env.VUE_APP_BACKEND_BASE_URL + '/api/v1/users'
+
+      const myHeaders = new Headers()
+      myHeaders.append("Content-Type", "application/json")
+
+      const payload = JSON.stringify({
+        firstName: this.firstName,
+        lastName: this.lastName,
+        email: this.email,
+        password: this.password
+      });
+
+      const requestOptions = {
+        method: 'POST',
+        headers: myHeaders,
+        body: payload,
+        redirect: 'follow'
+      }
+
+      fetch(endpoint, requestOptions)
+        .catch(error => console.log('error', error))
+
     }
   }
 }

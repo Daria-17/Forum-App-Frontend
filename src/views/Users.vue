@@ -32,35 +32,6 @@ export default {
   data () {
     return {
       users: [
-        {
-          id: 1,
-          firstname: 'Maya',
-          lastname: 'Meier',
-          dob: 2001 - 12 - 6,
-          username: 'ingo',
-          email: 'stnh2@gmail.com',
-          password: '1256495we',
-          userRole: 'user',
-          creationDate: 2022 - 15 - 9,
-          active: true,
-          locked: true,
-          enabled: true
-        },
-        {
-          id: 2,
-          firstname: 'Lina',
-          lastname: 'Miren',
-          dob: 1986 - 10 - 25,
-          username: 'lina287',
-          email: 'miren25@gmail.com',
-          password: '1248rt156.',
-          userRole: 'user',
-          creationDate: 2022 - 7 - 7,
-          active: true,
-          locked: true,
-          enabled: true
-
-        }
       ]
     }
   },
