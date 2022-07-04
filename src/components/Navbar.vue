@@ -1,4 +1,4 @@
-<template>
+<template xmlns:th="http://www.w3.org/1999/xhtml">
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <img alt="Vue logo" src="../assets/logo.png" width="100" height="100">
@@ -11,6 +11,7 @@
         <div class="navbar-nav">
           <router-link class="nav-link" to="/">Home</router-link>
           <router-link class="nav-link" to="/topics">Topics</router-link>
+          <router-link class="nav-link" to="/topics/new">New topic</router-link>
           <router-link class="nav-link" to="/users">Members</router-link>
           <router-link class="nav-link" to="/about">About</router-link>
           <router-link class="nav-link" to="/sign_up">Sign Up</router-link>

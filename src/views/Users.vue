@@ -6,17 +6,15 @@
 
       <ul class="list-group list-group-horizontal">
         <li class="list-group-item">{{ user.id }}</li>
-        <li class="list-group-item">{{ user.firstname }}</li>
-        <li class="list-group-item">{{ user.lastname }}</li>
+        <li class="list-group-item">{{ user.firstName }}</li>
+        <li class="list-group-item">{{ user.lastName }}</li>
         <li class="list-group-item">{{ user.dob }}</li>
         <li class="list-group-item">{{ user.username }}</li>
         <li class="list-group-item">{{ user.email }}</li>
-        <li class="list-group-item">{{ user.password }}</li>
         <li class="list-group-item">{{ user.userRole }}</li>
-        <li class="list-group-item">{{ user.creationDate }}</li>
-        <li class="list-group-item">{{ user.active ? 'Nutzer: aktiv' : 'Nutzer: inaktiv' }}</li>
+        <li class="list-group-item">{{ user.creationDate }} </li>
         <li class="list-group-item">{{ user.locked ? 'Nutzer: locked' : 'Nutzer: unlocked' }}</li>
-        <li class="list-group-item">{{ user.enabled ? 'Nutzer: enabled' : 'Nutzer: unenabled' }}</li>
+        <li class="list-group-item">{{ user.enabled ? 'Nutzer: aktiv' : 'Nutzer: inaktiv' }}</li>
 
       </ul>
     </div>

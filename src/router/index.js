@@ -4,6 +4,7 @@ import Topics from '@/views/Topics'
 import Users from '@/views/Users'
 import Home from '@/views/Home'
 import About from '@/views/About'
+import TopicNewForm from '@/views/TopicNewForm'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/sign_up',
     name: 'sign_up',
     component: SignUp
+  },
+  {
+    path: '/topics/new',
+    name: 'new_topic',
+    component: TopicNewForm
   }
 ]
 
